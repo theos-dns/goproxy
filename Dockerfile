@@ -9,6 +9,7 @@ RUN tar -xvzf proxy-linux-amd64.tar.gz
 
 
 FROM alpine:3.17
+LABEL org.opencontainers.image.source="https://github.com/theos-dns/goproxy"
 
 COPY --from=builder --chmod=777 /root/goproxy/proxy /root/goproxy
 
